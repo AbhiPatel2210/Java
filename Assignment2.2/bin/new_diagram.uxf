@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>30</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Battleship::Square
+--
+-x: int 
+-y: int
+-comp: boolean
+--
++toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>30</y>
+      <w>510</w>
+      <h>450</h>
+    </coordinates>
+    <panel_attributes>Battleship::View
+--
+-model:Model
+-frame: JFrame
+-panel: JPanel
+-leftPanel: JPanel
+-leftBoardPanel: JPanel
+-leftBottomPanel: JPanel
+-rightPanel: JPanel 
+-rightBoardPanel: JPanel 
+-rightBottomPanel: JPanel 
+-optionPanel: JPanel 
+-centerPanel: JPanel 
+-messagesArea: JTextArea 
+-topPanel: JPanel 
+-bottomPanel: JPanel
+-designPanel: Jpanel 
+--
++write(String text) 
++drawBoard(JPanel boardPanel, JPanel panel, square [ ] [ ] array, int dimension)
++placeShip(int x,int y):int 
++displayColors(Square [ ][ ] array, char b [ ][ ])
++randomPlayerBoard()
++reset()
++resize()
++updateLabels()
++selectComputer(int x, int y)
++selectPlayer(int x, int y)
++design()
++allShipsPlaced()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>240</y>
+      <w>500</w>
+      <h>410</h>
+    </coordinates>
+    <panel_attributes>Battleship::Model
+--
+-window:View
+-dimension: int 
+-board: int 
+-playerShips: char[ ][ ] 
+-compShips: char[ ][ ]
+-playerShipsHit: int 
+-compShipsHit: int 
+-compSquare: int 
+-playerSquare: int 
+-readyToPlay: boolean
+-playing: boolean 
+--
++getScore():double
++placeShips(int x, int y, int length, Boolean vertical): boolean 
++isSpace(int x, int y, int length, Boolean vertical): boolean  
++computerMove():int [ ]
++computerMakesMove()
++randomPlayerBoard()
++initializeBoard(char b [ ][ ])
++selectComputer(int x, int y):int
++selectPlayer(int x,int y):int
++select(char b[ ][ ],int x ,int y):int
++placeShip(char b [ ][ ], int length, int x , int y , int vertical, int direction):boolean
++placeShips(char b [ ][ ]):boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>710</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Battleship::Contoller
+--
+-model: Model
+-window:View
+--
+setModel(Model model)
+actionPerformed(ActionEvent e)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>260</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>470</y>
+      <w>40</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;230.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>30</x>
+      <y>650</y>
+      <w>700</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;680.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>60</y>
+      <w>390</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=N
+
+bg=BLACK</panel_attributes>
+    <additional_attributes>370.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

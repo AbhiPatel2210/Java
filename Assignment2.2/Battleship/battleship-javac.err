@@ -1,0 +1,13 @@
+warning: [path] bad path element "lib": no such file or directory
+src\battleship\View.java:639: warning: [deprecation] Locale(String,String) in Locale has been deprecated
+	private Locale englishLocale = new Locale("en", "CA");
+	                               ^
+src\battleship\View.java:641: warning: [deprecation] Locale(String,String) in Locale has been deprecated
+    private Locale frenchLocale = new Locale("fr", "CA");
+                                  ^
+src\battleship\Controller.java:242: warning: [unchecked] unchecked cast
+				JComboBox <Integer>button=(JComboBox <Integer>)e.getSource();
+				                                                          ^
+  required: JComboBox<Integer>
+  found:    Object
+4 warnings
